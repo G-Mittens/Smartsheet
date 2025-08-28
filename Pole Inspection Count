@@ -1,0 +1,8 @@
+=IF([POLE XFER]@row = 1, 1, 0) 
++ IF(RISER@row = 1, 5, 0) 
++ IF([POLE MST]@row = "YES", 8, 0) 
++ IF([Tree Trimming]@row <> "", 1, 0) 
++ IF(Lashing@row <> "", 1, 0) 
++ IF([Lash End]@row <> "", 1, 0) 
++ IF([Dead Drops]@row <> "", 1, 0) 
++ IF(Hardware@row <> "", 1, 0)
