@@ -1,0 +1,8 @@
+=IF(OR([HH Leveled]@row = "YES", [HH Leveled]@row = "NO"), 1, 0) 
++ IF(OR([HH Bolts]@row = "YES", [HH Bolts]@row = "NO"), 1, 0) 
++ IF(OR([HH Gravel]@row = "YES", [HH Gravel]@row = "NO"), 1, 0) 
++ IF(OR([HH Conduits]@row = "YES", [HH Conduits]@row = "NO"), 1, 0) 
++ IF(OR([HH Steps]@row = "YES", [HH Steps]@row = "NO"), 1, 0) 
++ IF(OR([HH Hang Items]@row = "YES", [HH Hang Items]@row = "NO"), 1, 0) 
++ IF(OR([HH Fiber Tags]@row = "YES", [HH Fiber Tags]@row = "NO"), 2, 0) 
++ IF(OR([HH Ground]@row = "YES", [HH Ground]@row = "NO"), IF(HAS([HH No Ground]@row, "Ground Rod"), 4, 6), 0)
