@@ -1,0 +1,20 @@
+=IF(OR([PED Secured]@row = "YES", [PED Secured]@row = "NO"), 1, 0) 
++ IF(OR([PED Buried]@row = "YES", [PED Buried]@row = "NO"), 1, 0) 
++ IF(OR([PED Address]@row = "YES", [PED Address]@row = "NO"), 1, 0) 
++ IF([No MST]@row = 1, 0, 
+IF(OR([MST Mounted]@row = "YES", [MST Mounted]@row = "NO"), 1, 0) 
++ IF(OR([MST Ports]@row = "YES", [MST Ports]@row = "NO"), 1, 0) 
++ IF(OR([Fiber Count]@row = "YES", [Fiber Count]@row = "NO"), 1, 0) 
++ IF(OR([MST OFL]@row = "YES", [MST OFL]@row = "NO"), 1, 0)) 
++ IF([Copper Lines]@row = 1, 0, 
+IF(OR([Copper Term]@row = "YES", [Copper Term]@row = "NO"), 1, 0) 
++ IF(OR([Copper Feeders]@row = "YES", [Copper Feeders]@row = "NO"), 1, 0)) 
++ IF(OR([PED Conduits]@row = "YES", [PED Conduits]@row = "NO"), 1, 0) 
++ IF(OR([PED Gravel]@row = "YES", [PED Gravel]@row = "NO"), 1, 0) 
++ IF([PED Ground]@row = 1, 0) 
++ IF(OR([PED GR (DEPTH)]@row = "YES", [PED GR (DEPTH)]@row = "NO"), 1, 0) 
++ IF(HAS([PED No Ground]@row, "BOTH"), 2, 
+IF(HAS([PED No Ground]@row, "#6 Wire"), 1, 0) 
++ IF(HAS([PED No Ground]@row, "Ground Rod"), 1, 0)) 
++ IF(OR([PED Bonding]@row = "YES", [PED Bonding]@row = "NO"), 1, 0) 
++ IF(OR([House Keeping]@row = "YES", [House Keeping]@row = "NO"), 1, 0)
