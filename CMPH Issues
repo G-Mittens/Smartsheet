@@ -1,0 +1,4 @@
+=IF([CMPH Case Fiber]@row = "NO", "Recoil fiber neatly / ", "") 
++ IF([CMPH Tags]@row = "OFL", "Install (OFL) on lines / ", "") 
++ IF([CMPH Tags]@row = "FIBER TAGS", "Case tags are missing (Redirect GIG to splicers) / ", "") 
++ IF([CMPH Tags]@row = "BOTH", "Case tags are missing (Redirect GIG to splicers) & Install (OFL) on lines / ", "")
