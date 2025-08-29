@@ -1,0 +1,41 @@
+=IF(RIGHT([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row, 2) = "/ ", 
+LEFT([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row, LEN([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row) - 2), 
+IF(RIGHT([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row, 1) = "/", 
+LEFT([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row, 
+LEN([PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row) - 1), 
+[PED Issues]@row 
++ [POLE Issues]@row 
++ [HH Issues]@row 
++ [CMPH Issues]@row 
++ [FP Issues]@row 
++ [General Notes]@row))
