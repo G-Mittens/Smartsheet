@@ -1,0 +1,4 @@
+=IF([FP Leveled]@row = "NO", 1, 0) 
++ IF([FP Bolt]@row = "NO", 1, 0) 
++ IF([FP Gravel]@row = "NO", 1, 0) 
++ IF([FP Conduits]@row = "NO", 1, 0)
