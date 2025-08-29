@@ -1,0 +1,1 @@
+=IF(Notes@row <> "", "NOTES => " + Notes@row + " / ", "")
