@@ -1,0 +1,4 @@
+=IF([FP Leveled]@row = "NO", "Lower FP / ", "") 
++ IF([FP Bolt]@row = "NO", "Missing bolt / ", "") 
++ IF([FP Gravel]@row = "NO", "Add PG / ", "") 
++ IF([FP Conduits]@row = "NO", "Seal conduits / ", "")
