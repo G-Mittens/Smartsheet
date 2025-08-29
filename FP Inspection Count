@@ -1,0 +1,4 @@
+=IF(OR([FP Leveled]@row = "YES", [FP Leveled]@row = "NO"), 1, 0) 
++ IF(OR([FP Bolt]@row = "YES", [FP Bolt]@row = "NO"), 1, 0) 
++ IF(OR([FP Gravel]@row = "YES", [FP Gravel]@row = "NO"), 1, 0) 
++ IF(OR([FP Conduits]@row = "YES", [FP Conduits]@row = "NO"), 1, 0)
