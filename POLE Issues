@@ -27,3 +27,4 @@
 + IF(Hardware@row = "NO", "Need adequate spacing of hardware / ", "") 
 + IF([Tree Trimming]@row = 1, "Tree trimming needed / ", "")
 + IF([Belly]@row =1, "Remove belly from span / ", "")
++ IF([Bug Nut]@row =1, "NO bug nuts in mid span, delash and relash span / ", "")
