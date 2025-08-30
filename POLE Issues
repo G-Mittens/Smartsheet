@@ -23,6 +23,6 @@
 + IF(HAS([MST (GIGs)]@row, "NOT IN ARMS REACH"), "MST needs to be moved closer to pole  / ", "") 
 + IF(Lashing@row = "NO", "The line is rubbing on items / ", "") 
 + IF([Lash End]@row = "Live line", "Lashing is terminated around the live line / ", "") 
-+ IF([Dead Drops]@row = "YES", "RMV dead drops / ", "") 
++ IF([Dead Drops]@row = 1, "RMV dead drops / ", "") 
 + IF(Hardware@row = "NO", "Need adequate spacing of hardware / ", "") 
 + IF([Tree Trimming]@row = 1, "Tree trimming needed / ", "")
