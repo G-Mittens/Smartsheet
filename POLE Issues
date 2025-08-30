@@ -28,3 +28,6 @@
 + IF([Tree Trimming]@row = 1, "Tree trimming needed / ", "")
 + IF([Belly]@row =1, "Remove belly from span / ", "")
 + IF([Bug Nut]@row =1, "NO bug nuts in mid span, delash and relash span / ", "")
++ IF(HAS([Slack Loop]@row, "No snowshoe(s)"), "Install snowshoe(s) at slack loop / ", "")
++ IF(HAS([Slack Loop]@row, "Not lashed"), "Lash slack loop to support / ", "")
++ IF(HAS([Slack Loop]@row, "No tags on the case"), "Case missing cable tag / ", "")
