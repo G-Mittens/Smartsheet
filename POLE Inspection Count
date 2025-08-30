@@ -9,3 +9,4 @@
 + IF(Hardware@row <> "", 1, 0)
 + IF([Belly]@row= 1, 1, 0)
 + IF([Bug Nut]@row= 1, 1, 0)
++ COUNTM([Slack Loop]@row)
