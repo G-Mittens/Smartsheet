@@ -7,3 +7,4 @@
 + IF([Lash End]@row <> "", 1, 0) 
 + IF([Dead Drops]@row= 1, 1, 0) 
 + IF(Hardware@row <> "", 1, 0)
++ IF([Belly]@row= 1, 1, 0)
