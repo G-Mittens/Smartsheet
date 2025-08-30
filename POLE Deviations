@@ -7,4 +7,5 @@
 + IF(Hardware@row = "NO", 1, 0) 
 + IF([Tree Trimming]@row = 1, 1, 0)
 + IF([Belly]@row = 1, 1, 0)
++ IF([Bug Nut]@row = 1, 1, 0)
 + COUNTM([ANCHOR (GIGs)]@row)
