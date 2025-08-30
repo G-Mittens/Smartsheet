@@ -48,4 +48,5 @@ OR([FP Leveled]@row = "NO",
 [FP Gravel]@row = "NO", 
 [FP Conduits]@row = "NO",
 [Belly]@row = 1,
+[Bug Nut]@row = 1,
 [Notes]@row <> "")), "Any Red", "")
