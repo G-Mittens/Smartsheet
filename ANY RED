@@ -46,5 +46,6 @@ OR([POLE XFER]@row = 1, CONTAINS("Y", [XFER is CompX]@row),
 OR([FP Leveled]@row = "NO", 
 [FP Bolt]@row = "NO", 
 [FP Gravel]@row = "NO", 
-[FP Conduits]@row = "NO", 
+[FP Conduits]@row = "NO",
+[Belly]@row = 1,
 [Notes]@row <> "")), "Any Red", "")
