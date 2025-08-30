@@ -26,3 +26,4 @@
 + IF([Dead Drops]@row = 1, "RMV dead drops / ", "") 
 + IF(Hardware@row = "NO", "Need adequate spacing of hardware / ", "") 
 + IF([Tree Trimming]@row = 1, "Tree trimming needed / ", "")
++ IF([Belly]@row =1, "Remove belly from span / ", "")
