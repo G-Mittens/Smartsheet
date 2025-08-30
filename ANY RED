@@ -1,52 +1,50 @@
-=IF(OR(OR([PED Secured]@row = "NO", 
-[PED Buried]@row = "NO", 
-[PED Address]@row = "NO", 
-[MST Mounted]@row = "NO", 
-[MST Ports]@row = "NO", 
-[Fiber Count]@row = "NO", 
-[MST OFL]@row = "NO", 
-[Copper Lines]@row = "NO", 
-[Copper Term]@row = "NO", 
-[Copper Feeders]@row = "NO"), 
-OR([PED Conduits]@row = "NO", 
-[PED Gravel]@row = "NO", 
-[PED GR (DEPTH)]@row = "NO", 
-HAS([PED No Ground]@row, "Ground rod"), 
-HAS([PED No Ground]@row, "#6 Wire"), 
-HAS([PED No Ground]@row, "Both"), 
-[PED Bonding]@row = "NO", 
-[House Keeping]@row = "NO", 
-[CMPH Case Fiber]@row = "NO", 
-HAS([CMPH Tags]@row, "OFL"), 
-HAS([CMPH Tags]@row, "FIBER TAGS"), 
-HAS([CMPH Tags]@row, "BOTH")), 
-OR([HH Leveled]@row = "NO", 
-[HH Bolts]@row = "NO", 
-[HH Gravel]@row = "NO", 
-[HH Conduits]@row = "NO", 
-[HH GR Install]@row = "NO", 
-[HH GR (DEPTH)]@row = "NO", 
-HAS([HH No Ground]@row, "Ground Rod"), 
-HAS([HH No Ground]@row, "#6 Wire"), 
-HAS([HH No Ground]@row, "Bus Bar"), 
-HAS([HH No Ground]@row, "Bonding"), 
-[HH Hang Items]@row = "NO", 
-HAS([HH Tags]@row, "OFL"), 
-HAS([HH Tags]@row, "FIBER TAGS"), 
-HAS([HH Tags]@row, "BOTH")), 
-OR([POLE XFER]@row = 1, CONTAINS("Y", [XFER is CompX]@row), 
-[RISER Pass]@row = "NO",
-[ANCHOR Pass]@row = "NO",
-[MST PASS]@row = "NO", 
-[Lashing]@row = "NO", 
-[Lash End]@row = "Live line", 
-[Dead Drops]@row = "YES", 
-[Hardware]@row = "NO", 
-[Tree Trimming]@row = "YES"), 
-OR([FP Leveled]@row = "NO", 
-[FP Bolt]@row = "NO", 
-[FP Gravel]@row = "NO", 
-[FP Conduits]@row = "NO",
-[Belly]@row = 1,
-[Bug Nut]@row = 1,
-[Notes]@row <> "")), "Any Red", "")
+=IF(
+(
+IF([PED Secured]@row = "NO", 1, 0)
++ IF([PED Buried]@row = "NO", 1, 0)
++ IF([PED Address]@row = "NO", 1, 0)
++ IF([MST Mounted]@row = "NO", 1, 0)
++ IF([MST Ports]@row = "NO", 1, 0)
++ IF([Fiber Count]@row = "NO", 1, 0)
++ IF([MST OFL]@row = "NO", 1, 0)
++ IF([Copper Lines]@row = "NO", 1, 0)
++ IF([Copper Term]@row = "NO", 1, 0)
++ IF([Copper Feeders]@row = "NO", 1, 0)
++ IF([PED Conduits]@row = "NO", 1, 0)
++ IF([PED Gravel]@row = "NO", 1, 0)
++ IF([PED GR (DEPTH)]@row = "NO", 1, 0)
++ IF(COUNTM([PED No Ground]@row) > 0, 1, 0)
++ IF([PED Bonding]@row = "NO", 1, 0)
++ IF([House Keeping]@row = "NO", 1, 0)
++ IF([CMPH Case Fiber]@row = "NO", 1, 0)
++ IF(COUNTM([CMPH Tags]@row) > 0, 1, 0)
++ IF([HH Leveled]@row = "NO", 1, 0)
++ IF([HH Bolts]@row = "NO", 1, 0)
++ IF([HH Gravel]@row = "NO", 1, 0)
++ IF([HH Conduits]@row = "NO", 1, 0)
++ IF([HH GR Install]@row = "NO", 1, 0)
++ IF([HH GR (DEPTH)]@row = "NO", 1, 0)
++ IF(COUNTM([HH No Ground]@row) > 0, 1, 0)
++ IF([HH Hang Items]@row = "NO", 1, 0)
++ IF(COUNTM([HH Tags]@row) > 0, 1, 0)
++ IF([POLE XFER]@row = 1, 1, 0)
++ IF(CONTAINS("Y", [XFER is CompX]@row), 1, 0)
++ IF([RISER Pass]@row = "NO", 1, 0)
++ IF([ANCHOR Pass]@row = "NO", 1, 0)
++ IF([MST PASS]@row = "NO", 1, 0)
++ IF(Lashing@row = "NO", 1, 0)
++ IF([Lash End]@row = "Live line", 1, 0)
++ IF([Dead Drops]@row = 1, 1, 0)
++ IF(Hardware@row = "NO", 1, 0)
++ IF([Tree Trimming]@row = 1, 1, 0)
++ IF([FP Leveled]@row = "NO", 1, 0)
++ IF([FP Bolt]@row = "NO", 1, 0)
++ IF([FP Gravel]@row = "NO", 1, 0)
++ IF([FP Conduits]@row = "NO", 1, 0)
++ IF([Belly]@row = 1, 1, 0)
++ IF([Bug Nut]@row = 1, 1, 0)
++ IF([Notes]@row <> "", 1, 0)
++ IF(COUNTM([Slack Loop]@row) > 0, 1, 0)
+) > 0,
+"Any Red", ""
+)
