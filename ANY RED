@@ -44,6 +44,7 @@ IF([PED Secured]@row = "NO", 1, 0)
 + IF([Belly]@row = 1, 1, 0)
 + IF([Bug Nut]@row = 1, 1, 0)
 + IF([Notes]@row <> "", 1, 0)
++ IF([MST Tail]@row = 1, 1, 0)
 + IF(COUNTM([Slack Loop]@row) > 0, 1, 0)
 ) > 0,
 "Any Red", ""
