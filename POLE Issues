@@ -32,3 +32,4 @@
 + IF(HAS([Slack Loop]@row, "No snowshoe(s)"), "Install snowshoe(s) at slack loop / ", "")
 + IF(HAS([Slack Loop]@row, "Not lashed"), "Lash slack loop to support / ", "")
 + IF(HAS([Slack Loop]@row, "No tags on the case"), "Case missing cable tag / ", "")
++ IF([MST Tail]@row = 1, "MST tail needs to be absorbed into span and lashed. No figure 8 / ", "")
